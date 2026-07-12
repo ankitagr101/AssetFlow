@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assign Asset</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="main">
+
+<h1>Assign Asset</h1>
+
+<form method="POST">
+
+<label>Select Asset</label><br>
+
+<select name="asset_name">
+
+{% for asset in assets %}
+
+<option>{{ asset.asset_id }} - {{ asset.name }}</option>
+
+{% endfor %}
+
+</select>
+
+<br><br>
+
+<label>Select Employee</label><br>
+
+<select name="employee_name">
+
+{% for employee in employees %}
+
+<option>{{ employee.emp_id }} - {{ employee.name }}</option>
+
+{% endfor %}
+
+</select>
+
+<br><br>
+
+<button type="submit">Assign Asset</button>
+
+</form>
+
+<br><br>
+
+<h2>Assignment History</h2>
+
+<table>
+
+<tr>
+
+<th>Asset</th>
+
+<th>Employee</th>
+
+</tr>
+
+{% for assignment in assignments %}
+
+<tr>
+
+<td>{{ assignment.asset_name }}</td>
+
+<td>{{ assignment.employee_name }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/dashboard">⬅ Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

@@ -114,3 +114,25 @@ th{
 background:#2563eb;
 color:white;
 }
+
+.activity-section{
+margin-top:30px;
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.activity-section h2{
+margin-bottom:15px;
+}
+
+.activity-section ul{
+list-style:none;
+}
+
+.activity-section li{
+padding:12px;
+border-bottom:1px solid #ddd;
+font-size:16px;
+}

@@ -1,1 +1,71 @@
-<h1>Assets Page</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asset Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="main">
+
+<h1>Asset Management</h1>
+
+<form method="POST">
+
+<input type="text" name="asset_id" placeholder="Asset ID" required>
+
+<input type="text" name="name" placeholder="Asset Name" required>
+
+<input type="text" name="category" placeholder="Category" required>
+
+<select name="status">
+
+<option>Available</option>
+
+<option>Assigned</option>
+
+<option>Maintenance</option>
+
+</select>
+
+<button type="submit">Add Asset</button>
+
+</form>
+
+<br><br>
+
+<table>
+
+<tr>
+<th>Asset ID</th>
+<th>Name</th>
+<th>Category</th>
+<th>Status</th>
+</tr>
+
+{% for asset in assets %}
+
+<tr>
+
+<td>{{ asset.asset_id }}</td>
+
+<td>{{ asset.name }}</td>
+
+<td>{{ asset.category }}</td>
+
+<td>{{ asset.status }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/dashboard">⬅ Dashboard</a>
+
+</div>
+
+</body>
+</html>

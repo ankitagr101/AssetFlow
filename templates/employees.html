@@ -1,1 +1,63 @@
-<h1>Employees Page</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="main">
+
+<h1>Employee Management</h1>
+
+<form method="POST">
+
+<input type="text" name="emp_id" placeholder="Employee ID" required>
+
+<input type="text" name="name" placeholder="Employee Name" required>
+
+<input type="text" name="department" placeholder="Department" required>
+
+<input type="email" name="email" placeholder="Email" required>
+
+<button type="submit">Add Employee</button>
+
+</form>
+
+<br><br>
+
+<table>
+
+<tr>
+<th>Employee ID</th>
+<th>Name</th>
+<th>Department</th>
+<th>Email</th>
+</tr>
+
+{% for employee in employees %}
+
+<tr>
+
+<td>{{ employee.emp_id }}</td>
+
+<td>{{ employee.name }}</td>
+
+<td>{{ employee.department }}</td>
+
+<td>{{ employee.email }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/dashboard">⬅ Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>
