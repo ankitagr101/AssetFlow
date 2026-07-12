@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetFlow Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>AssetFlow</h2>
+
+        <ul>
+
+            <li><a href="/dashboard"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+            <li><a href="/assets"><i class="fa-solid fa-box"></i> Assets</a></li>
+
+            <li><a href="/employees"><i class="fa-solid fa-users"></i> Employees</a></li>
+
+            <li><a href="/reports"><i class="fa-solid fa-chart-column"></i> Reports</a></li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <h1>Enterprise Dashboard</h1>
+
+            <div class="profile">
+
+                <i class="fa-solid fa-user-circle"></i>
+
+                <span>Ankit</span>
+
+            </div>
+
+        </header>
+
+        <!-- Cards -->
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Assets</h3>
+                <h2>250</h2>
+            </div>
+
+            <div class="card">
+                <h3>Assigned</h3>
+                <h2>165</h2>
+            </div>
+
+            <div class="card">
+                <h3>Available</h3>
+                <h2>72</h2>
+            </div>
+
+            <div class="card">
+                <h3>Maintenance</h3>
+                <h2>13</h2>
+            </div>
+
+        </section>
+
+        <!-- Table -->
+
+        <section class="table-section">
+
+            <h2>Recent Assets</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Asset ID</th>
+
+                        <th>Name</th>
+
+                        <th>Department</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>AST001</td>
+
+                        <td>Dell Laptop</td>
+
+                        <td>IT</td>
+
+                        <td>Assigned</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>AST002</td>
+
+                        <td>HP Laptop</td>
+
+                        <td>HR</td>
+
+                        <td>Available</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>AST003</td>
+
+                        <td>Printer</td>
+
+                        <td>Admin</td>
+
+                        <td>Maintenance</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>AST004</td>
+
+                        <td>Monitor</td>
+
+                        <td>Finance</td>
+
+                        <td>Assigned</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
