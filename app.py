@@ -100,7 +100,17 @@ def assign():
 
 @app.route("/reports")
 def reports():
-    return render_template("reports.html")
+
+    total_assets = Asset.query.count()
+    total_employees = Employee.query.count()
+    total_assignments = Assignment.query.count()
+
+    return render_template(
+        "reports.html",
+        total_assets=total_assets,
+        total_employees=total_employees,
+        total_assignments=total_assignments
+    )
 
 with app.app_context():
     db.create_all()

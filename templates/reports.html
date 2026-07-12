@@ -1,1 +1,44 @@
-<h1>Reports Page</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reports</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="main">
+
+<h1>Reports</h1>
+
+<table>
+
+<tr>
+<th>Report</th>
+<th>Count</th>
+</tr>
+
+<tr>
+<td>Total Assets</td>
+<td>{{ total_assets }}</td>
+</tr>
+
+<tr>
+<td>Total Employees</td>
+<td>{{ total_employees }}</td>
+</tr>
+
+<tr>
+<td>Total Assignments</td>
+<td>{{ total_assignments }}</td>
+</tr>
+
+</table>
+
+<br>
+
+<a href="/dashboard">⬅ Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>
