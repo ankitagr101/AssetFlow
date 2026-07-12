@@ -12,6 +12,7 @@ AssetFlow is a simple web application developed for the Odoo Hackathon. It helps
 - Add and View Employees
 - Assign Assets to Employees
 - SQLite Database
+- Reports Page
 - Simple and Clean Interface
 
 ## Technologies Used
